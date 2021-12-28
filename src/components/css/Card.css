@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+  font-family: 'Lato', sans-serif;
+  /* font-size: 15px; */
+  color: #858fad;
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.margin {
+  margin: 1rem;
+}
+.padding {
+  padding: 1rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul {
+  padding: 0 0 0 20px !important;
+}
+nav ul li button {
+  border: none;
+  cursor: pointer;
+}
+nav ul li button:hover {
+  background: rgb(224, 227, 230);
+}
+.outer-container {
+  width: 35%;
+}
+
+.billing-main {
+  position: relative;
+}
+
+.billing {
+  width: 90%;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+}
+.billing div {
+  margin: 0.5rem;
+}
+.discount {
+  font-size: 14px;
+  color: #ff8c66;
+  background: #feece7;
+  padding: 1%;
+  border-radius: 10px;
+}
+.price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #293356;
+}
+.toggle-out {
+  width: 3rem;
+  height: 1.5rem;
+  background: #cdd7ee;
+  border-radius: 13px;
+  position: relative;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+.toggle-in-monthly {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  left: 5%;
+  /* top: 0; */
+  margin: 0 !important;
+}
+.toggle-in-yearly {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  right: 5%;
+  /* top: 0; */
+  margin: 0 !important;
+}
+/* .toggle-out:hover {
+  background: rgb(52, 212, 233);
+} */
+/* .toggle-out:active > .toggle-in {
+  left: 55%;
+} */
+.toggle-out:hover {
+  background: #a5f3eb;
+}
+/* .toggle-out:active,
+.toggle-in {
+  right: 0;
+} */
+.features {
+  justify-content: flex-start;
+  font-weight: 500;
+}
+.features-container {
+  margin-top: 2.2rem;
+  padding-top: 1.5rem;
+  position: relative;
+}
+.features-container:before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(212, 209, 209);
+  top: 0;
+}
+.features div {
+  margin: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.start {
+  background: #293356;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 15px;
+  width: 35%;
+}
