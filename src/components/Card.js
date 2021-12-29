@@ -2,14 +2,13 @@ import React from 'react';
 import {useState} from 'react';
 import './css/Card.css';
 
-function Card() {
+
+function Card(props) {
     const [price, setPrice] = useState(8);
     const [money, setMoney] = useState(10);
     const [toggle, setToggle] = useState(false);
-
     const switchToggle = ()=>{
         toggle ? setToggle(false) : setToggle(true);
-        console.log(toggle);
     }
     const updatePrice = ()=>{
         switchToggle();
@@ -26,7 +25,7 @@ function Card() {
 
     }
     return (
-        <div className="outer-container">
+        <div className={props.mode? "outer-container outer-container-dark": "outer-container"}>
             <nav>
                 <ul className="flex">
                     <li><button onClick={()=>{setMoney(10);setPrice(8);setToggle(false)}}>10K</button></li>
@@ -37,14 +36,14 @@ function Card() {
                 </ul>
             </nav>
             <div className="inner-container">
-            <div className="flex margin">
+            <div className="flex margin price-container">
               <div>{money}K PAGEVIEWS</div>
-              <div><span className="price">${price}.00</span> / month</div>
+              <div><span className={props.mode?"price price-dark" : "price"}>${price}.00</span> / month</div>
            </div>
            <div className="flex margin padding billing-main">
                <div className="flex billing">
             <div>Monthly billing</div> 
-             <div onClick={updatePrice} className="toggle-out">
+             <div onClick={updatePrice} className={props.mode? "toggle-out toggle-out-dark" : "toggle-out"}>
                  <div className={toggle ? "toggle-in-yearly" : "toggle-in-monthly"}>
                      </div>
              </div>
@@ -56,21 +55,21 @@ function Card() {
            <div className="flex margin features-container">
              <div className="">
                <div className="flex features">
-                   <div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg></div>
+                   <div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" strokeWidth="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg></div>
                    <div>Unlimited Websites</div>
                </div>
                <div className="flex features">
-                   <div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg></div>
+                   <div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" strokeWidth="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg></div>
                    <div>100% Data Ownership</div>
                </div>
                <div className="flex features">
-                   <div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg></div>
+                   <div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" strokeWidth="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg></div>
                    <div>Email Reports</div>
                </div>
 
              </div>
            
-             <button className="start">Start my Trial</button>
+             <button className={props.mode? "start start-dark" : "start"}>Start my Trial</button>
             </div>
            </div>
            

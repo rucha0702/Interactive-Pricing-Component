@@ -38,6 +38,11 @@ nav ul li button:hover {
   border-radius: 10px;
   box-shadow: 1px 1px 15px rgb(221, 225, 228);
 }
+.outer-container-dark {
+  background: #333;
+  box-shadow: 1px 1px 10px rgb(22, 22, 22);
+  color: rgb(214, 223, 224);
+}
 
 .billing-main {
   position: relative;
@@ -65,6 +70,9 @@ nav ul li button:hover {
   font-weight: 800;
   color: #293356;
 }
+.price-dark {
+  color: rgb(234, 243, 241);
+}
 .toggle-out {
   width: 3rem;
   height: 1.5rem;
@@ -74,6 +82,10 @@ nav ul li button:hover {
   padding: 2px;
   display: flex;
   align-items: center;
+}
+.toggle-out-dark {
+  background: #333;
+  border: 1px solid white;
 }
 .toggle-in-monthly {
   width: 1.2rem;
@@ -103,6 +115,9 @@ nav ul li button:hover {
 } */
 .toggle-out:hover {
   background: #a5f3eb;
+}
+.toggle-out-dark:hover {
+  background: rgb(4, 243, 4);
 }
 /* .toggle-out:active,
 .toggle-in {
@@ -136,4 +151,33 @@ nav ul li button:hover {
   padding: 0.5rem;
   border-radius: 15px;
   width: 35%;
+}
+.start-dark {
+  background: rgb(4, 97, 4);
+  border: 1px white dotted;
+}
+
+@media screen and (max-width: 768px) {
+  .price-container {
+    flex-direction: column;
+  }
+  .features-container {
+    flex-direction: column;
+  }
+  .billing-main {
+    margin: 2.5rem 0;
+  }
+  .billing {
+    width: 90%;
+    font-size: 12px;
+  }
+  .start {
+    width: 60%;
+    margin-top: 2rem;
+    padding: 0.8rem;
+    border-radius: 20px;
+  }
+  /* .outer-container {
+    margin: 1rem;
+  } */
 }
